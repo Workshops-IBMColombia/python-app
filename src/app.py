@@ -5,13 +5,14 @@ from flask import Flask, jsonify
 
 app = Flask(__name__) # Create a Flask application instance
 
-@app.route("/api/v1/details") # Define the route for the root URL
+@app.route("/api/v1/info") # Define the route for the root URL
 
-def details():
+def info():
    return jsonify({
         'time': datetime.datetime.now().strftime("%I:%M:%S%p on  %B %D %Y"),
         'hostname': socket.gethostname(),
-        'message': 'You are doing great, Human! :) :) :) :D'
+        'message': 'You are doing great, Human! :) :) :) :D',
+        'deployed_on': 'kubernetes'
    }) # Response displayed in the browser
 
 @app.route("/api/v1/healthz") # Define the route for the root URL
