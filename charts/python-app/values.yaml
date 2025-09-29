@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: ricardourregoarias/python-repo
   pullPolicy: IfNotPresent
-  tag: 6fee02
+  tag: f43359
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
